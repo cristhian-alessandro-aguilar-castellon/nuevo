@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Animación Registro</title>
+  <style>
+    body {
+      margin: 0;
+      background: linear-gradient(to bottom, #0d1b2a, #1b263b);
+      height: 100vh;
+      overflow: hidden;
+      color: white;
+      font-family: sans-serif;
+    }
+
+    .escena {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+
+    .persona {
+      position: absolute;
+      top: 60%;
+      left: 0;
+      width: 50px;
+      animation: caminar 8s linear infinite;
+    }
+
+    .mesa {
+      position: absolute;
+      bottom: 30%;
+      right: 10%;
+      width: 120px;
+      height: 60px;
+      background-color: #914d2d;
+      border: 4px solid #5c3a21;
+      border-radius: 6px;
+    }
+
+    .persona svg {
+      width: 100%;
+      height: auto;
+    }
+
+    @keyframes caminar {
+      0% { left: -60px; }
+      100% { left: 85%; }
+    }
+
+    .titulo {
+      position: absolute;
+      top: 5%;
+      width: 100%;
+      text-align: center;
+      font-size: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="escena">
+    <div class="titulo">Registro - Entrega de Formularios</div>
+
+    <!-- Persona animada -->
+    <div class="persona">
+      <svg viewBox="0 0 100 200">
+        <circle cx="50" cy="30" r="20" fill="white"/> <!-- cabeza -->
+        <rect x="40" y="50" width="20" height="60" fill="white"/> <!-- cuerpo -->
+        <line x1="40" y1="50" x2="20" y2="90" stroke="white" stroke-width="5"/> <!-- brazo izq -->
+        <line x1="60" y1="50" x2="80" y2="90" stroke="white" stroke-width="5"/> <!-- brazo der -->
+        <line x1="45" y1="110" x2="30" y2="160" stroke="white" stroke-width="5"/> <!-- pierna izq -->
+        <line x1="55" y1="110" x2="70" y2="160" stroke="white" stroke-width="5"/> <!-- pierna der -->
+      </svg>
+    </div>
+
+    <!-- Mesa -->
+    <div class="mesa"></div>
+  </div>
+</body>
+</html>
